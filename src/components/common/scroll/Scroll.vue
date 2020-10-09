@@ -11,28 +11,28 @@ import BScroll from "better-scroll";
 export default {
   data() {
     return {
-      scroll: null
+      scroll: null,
     };
   },
   props: {
     probeType: {
       type: Number,
-      default: 0
+      default: 0,
     },
     pullUpLoad: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   mounted() {
     this.scroll = new BScroll(this.$refs.father, {
       click: true,
       probeType: this.probeType,
-      pullUpLoad: this.pullUpLoad
+      pullUpLoad: this.pullUpLoad,
     });
     // 监听滚动位置
     if (this.probeType === 2 || this.probeType === 3) {
-      this.scroll.on("scroll", position => {
+      this.scroll.on("scroll", (position) => {
         this.$emit("scroll", position);
       });
     }
@@ -58,8 +58,8 @@ export default {
     },
     getScrollY() {
       return this.scroll ? this.scroll.y : 0;
-    }
-  }
+    },
+  },
 };
 </script>
 

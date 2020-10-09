@@ -5,10 +5,8 @@
       :key="index"
       class="tab-control-item"
       :class="{active:index===currentIndex}"
-      @click="itemClick(index)"
-    >
-      <span>{{item.title?item.title:item}}</span>
-    </div>
+      @click="itemClick(item,index)"
+    >{{item.title?item.title:item}}</div>
   </div>
 </template>
 
@@ -29,9 +27,10 @@ export default {
     };
   },
   methods: {
-    itemClick(index) {
+    itemClick(item, index) {
       this.currentIndex = index;
-      this.$emit("TabClick", index);
+      this.$emit("CateTabClick", item);
+      console.log(index);
     },
   },
 };
@@ -39,21 +38,23 @@ export default {
 
 <style scoped>
 .tab-control {
+  position: relative;
   display: flex;
+  flex-direction: column;
+  top: 44px;
+  left: 0;
+  height: calc(100vh - 93px);
+  width: 90px;
+  background-color: rgba(209, 209, 209, 0.883);
+  font-size: 14px;
   text-align: center;
-  font-size: 15px;
-  line-height: 40px;
-  height: 40px;
-  background-color: #fff;
+  line-height: calc((100vh - 93px) / 16);
 }
 .tab-control-item {
   flex: 1;
 }
 .active {
   color: #ff8198;
-}
-.active span {
-  padding: 5px;
-  border-bottom: 3px solid #ff8198;
+  background-color: #fff;
 }
 </style>

@@ -24,7 +24,6 @@ const store = new Vuex.Store({
         })
         if (oldProduct) {
           oldProduct.count += 1;
-          console.log(oldProduct.count);
           resolve('成功将购物车商品数量加1')
         } else {
           payload.count = 1;

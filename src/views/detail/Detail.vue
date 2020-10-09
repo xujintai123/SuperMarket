@@ -81,7 +81,7 @@ export default {
   },
   created() {
     // 1、保存传入的iid,进入detail界面created时，当前的路由为detail/:id，取出路由的id赋值给iid
-    this.iid = this.$route.params.id;
+    this.iid = this.$route.params.iid;
     // 2、调用getDetailItems()方法，根据iid请求详情数据
     this.getDetailItems(this.iid);
 

@@ -22,11 +22,11 @@ VueRouter.prototype.replace = function replace(to) {
   return VueRouterReplace.call(this, to).catch(err => err)
 }
 
-const Cart = () => import('../views/cart/Cart')
-const Home = () => import('../views/home/Home')
-const Category = () => import('../views/category/Category')
-const Profile = () => import('../views/profile/Profile')
-const Detail = () => import('../views/detail/Detail')
+const Cart = () => import('views/cart/Cart')
+const Home = () => import('views/home/Home')
+const Category = () => import('views/category/Category')
+const Profile = () => import('views/profile/Profile')
+const Detail = () => import('views/detail/Detail')
 
 // 2、创建router
 const routes = [
@@ -55,7 +55,7 @@ const routes = [
     component: Cart
   }, {
     name: 'Detail',
-    path: '/Detail/:id',
+    path: '/Detail/:iid',
     component: Detail
   }
 ]

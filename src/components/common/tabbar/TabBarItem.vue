@@ -21,20 +21,20 @@ export default {
     path: String,
     ActiveColor: {
       type: String,
-      default: "red"
-    }
+      default: "red",
+    },
   },
   computed: {
     isActive() {
-      // this.$route.path指的是每一个路由，
-      // this.path指的是当前点击的路由
+      // this.$route.path指的是当前活跃的路由，
+      // this.path指的组件对应的路由
       // 在所有路由中筛选当前点击的路由定义为活跃的路由（ return true）
       return this.$route.path.indexOf(this.path) !== -1;
     },
     Color() {
       // 判断是否处于活跃，若处于活跃，则将activecolor赋值
       return this.isActive ? { color: this.ActiveColor } : {};
-    }
+    },
   },
   data() {
     return {
@@ -44,8 +44,8 @@ export default {
   methods: {
     itemClick() {
       this.$router.push(this.path);
-    }
-  }
+    },
+  },
 };
 </script>
 

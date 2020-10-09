@@ -1,9 +1,14 @@
 <template>
-  <h2>个人</h2>
+  <div id="pro-file"></div>
 </template>
 
 <script>
-export default {};
+import Scroll from "components/common/scroll/Scroll";
+export default {
+  components: {
+    Scroll,
+  },
+};
 </script>
 
 <style>
