@@ -1,4 +1,4 @@
-# supermall
+# supermarket
 
 ## Project setup
 ```

@@ -28,6 +28,12 @@ const Category = () => import('views/category/Category')
 const Profile = () => import('views/profile/Profile')
 const Detail = () => import('views/detail/Detail')
 
+// import Home from '@/views/home/Home'
+// import Profile from '@/views/profile/Profile'
+// import Category from '@/views/category/Category'
+// import Cart from '@/views/cart/Cart'
+// import Detail from '@/views/detail/Detail'
+
 // 2、创建router
 const routes = [
   {
